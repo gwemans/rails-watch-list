@@ -1,10 +1,17 @@
-<h1>Add movie</h1>
+<div class="row justify-content-center">
+  <div>
+    <h1>Add movie</h1>
 
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.association :movie %>
-  <%= f.input :comment %>
+    <%= simple_form_for [@list, @bookmark] do |f| %>
+      <%= f.association :movie %>
+      <%= f.input :comment %>
 
-  <%= f.submit "Add this movie", class: "btn btn-primary" %>
-<% end %>
+      <%= f.submit "Add this movie", class: "btn btn-primary" %>
+    <% end %>
 
-<%= link_to 'Cancel', list_path(@list) %>
+
+    <div class="back-link">
+      <%= link_to 'Cancel', list_path(@list) %>
+    </div>
+  </div>
+</div>

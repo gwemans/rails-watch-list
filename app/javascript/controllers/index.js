@@ -6,3 +6,19 @@ import { application } from "./application"
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+// navbar scroll: (couldn't do it)
+
+// window.onscroll = function() {scrollFunction()};
+
+// function scrollFunction() {
+//   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+//     document.getElementById("navbar").style.padding = "10px 10px";
+//     document.getElementById("logo").style.fontSize = "25px";
+//     console.log("hehefhfehhfehfe");
+//   } else {
+//     document.getElementById("navbar").style.padding = "80px 10px";
+//     document.getElementById("logo").style.fontSize = "35px";
+//     console.log("hvvvvvvvvvvvvvvvvvve");
+//   }
+// }

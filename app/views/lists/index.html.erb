@@ -1,9 +1,15 @@
-<h1>The List of Lists</h1>
+<h1 class='page-title'>The List of Lists</h1>
 
-<%= link_to 'Create new list', new_list_path %>
-
-<ul>
+<div class="lists-container">
   <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list)%></li>
+    <div class="list-card d-flex justify-content-between align-items-center">
+      <div>
+        <%= link_to list.name, list_path(list)%>
+      </div>
+      <div class="back-link" style="font-size: medium">
+        <%= link_to 'Remove', list_path(list), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete the list '#{list.name}'?"}%>
+      </div>
+    </div>
+
   <% end %>
-</ul>
+</div>

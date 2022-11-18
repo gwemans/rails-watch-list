@@ -3,10 +3,12 @@
 
 <%= link_to "Add Movie", new_list_bookmark_path(@list), class: "btn btn-primary my-3" %>
 
-<div>
+<div classs="movies-container">
   <% @list.bookmarks.each do |bookmark| %>
-    <li><%= bookmark.movie.title %> - <%= link_to 'Delete movie', bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete '#{bookmark.movie.title}'?"}%></li>
+    <div class="movie-card"><%= bookmark.movie.title %> - <%= link_to 'Delete movie', bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete '#{bookmark.movie.title}'?"}%></div>
   <% end %>
 </div>
 
-<%= link_to "Back to Lists", lists_path, class: "btn btn-info my-3" %>
+<div class="back-link">
+  <%= link_to "Back to Lists", lists_path %>
+</div>

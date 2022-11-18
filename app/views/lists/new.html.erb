@@ -1,6 +1,10 @@
 <h1>Create list</h1>
-
-<%= simple_form_for (@list) do |f| %>
-  <%= f.input :name %>
-  <%= f.submit "Create List", class: "btn btn-primary" %>
-<% end %>
+<div class="new-list-from">
+  <%= simple_form_for (@list) do |f| %>
+    <%= f.input :name %>
+    <%= f.submit "Create List", class: "btn btn-primary" %>
+  <% end %>
+</div>
+<div class="back-link">
+  <%= link_to 'Cancel', lists_path %>
+</div>

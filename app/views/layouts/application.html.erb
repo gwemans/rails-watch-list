@@ -11,6 +11,12 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="navbar-lewagon">
+      <p id='logo'><%= link_to "_GW_WatchLists®", lists_path%></p>
+      <p class="btn btn-outline-light"><%= link_to 'Create new List', new_list_path %></p>
+    </div>
+    <div class="but-navbar">
+      <%= yield %>
+    </div>
   </body>
 </html>
